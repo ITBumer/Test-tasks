@@ -1,4 +1,4 @@
-#exercise
+# exercise
 pip install fastapi - установить fastapi
 pip install uvicorn - установить uvicorn для работы сервера
 pip install websockets - установить websockets

@@ -1,6 +1,4 @@
 # launch
-+ pip install fastapi - установить fastapi
-+ pip install uvicorn - установить uvicorn для работы сервера
-+ pip install websockets - установить websockets
-+ uvicorn server:app --reload - данной командой в терминале запускаем сервер
++ pip install -r requirements.txt - установка необходимых зависимостей осуществляется из консоли, с помощью следующей команды.
++ main.py - запускаем данный фаил он запустит сервер
 + http://127.0.0.1:8000 - переходим по ссылке проверяем работу

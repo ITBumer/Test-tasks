@@ -10,13 +10,13 @@ html = """
             <input type="text" id="messageText" autocomplete="off"/>
             <button>Отправить</button>
         </form>
-        <ol id='messages'>
-        </ol>
+        <a id='messages'>
+        </a>
         <script>
             var ws = new WebSocket("ws://localhost:8000/ws");
             ws.onmessage = function(event) {
                 var messages = document.getElementById('messages')
-                var message = document.createElement('li')
+                var message = document.createElement('tr')
                 var content = document.createTextNode(event.data)
                 message.appendChild(content)
                 messages.appendChild(message)

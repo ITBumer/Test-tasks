@@ -1,8 +1,10 @@
+import json
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse
 from web import html
 
 app = FastAPI()
+
 
 @app.get("/")
 async def get():
@@ -11,6 +13,9 @@ async def get():
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
+    number = 0
     while True:
-        data = await websocket.receive_text()
-        await websocket.send_text(f"{data}")
+        data = json.dumps(await websocket.receive_text())
+        number +=1
+        data2 = ("\n".join(f"{i+number}) "+j for i,j in enumerate(data.split())))
+        await websocket.send_text(f"{data2}")

@@ -14,6 +14,8 @@ def func (pol):
         if i in pol:
             rezult=(pol.replace(i,""))
             func(rezult)
+        else:
+            rezult = pol
 
 text = my_text.lower()
 
